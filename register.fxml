@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="541.0" prefWidth="708.0" style="-fx-border-color: #000080; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Registercontroller">
+   <children>
+      <HBox layoutX="31.0" layoutY="28.0" prefHeight="115.0" prefWidth="639.0">
+         <children>
+            <Pane prefHeight="117.0" prefWidth="664.0" style="-fx-border-color: #FFA500; -fx-border-width: 3;">
+               <children>
+                  <Label layoutX="180.0" layoutY="14.0" prefHeight="29.0" prefWidth="338.0" text="R V College of Engineering" textFill="#202dbf">
+                     <font>
+                        <Font name="Times New Roman Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="286.0" layoutY="46.0" text="Bangalore" textFill="#2921cf">
+                     <font>
+                        <Font name="Arial Black" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="174.0" layoutY="70.0" text="Attendence Automation" textFill="#942626">
+                     <font>
+                        <Font name="Arial Black" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="94.0" fitWidth="114.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@220px-RVCE_New_Logo.JPG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <VBox layoutX="31.0" layoutY="181.0" prefHeight="320.0" prefWidth="639.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #9999FF; -fx-border-width: 5;">
+         <children>
+            <Pane prefHeight="310.0" prefWidth="646.0">
+               <children>
+                  <TextField fx:id="name" layoutX="24.0" layoutY="44.0" prefHeight="25.0" prefWidth="165.0" promptText="USER NAME" />
+                  <TextField fx:id="id" layoutX="24.0" layoutY="98.0" prefHeight="25.0" prefWidth="165.0" promptText="FACULTY_ID" />
+                  <PasswordField fx:id="pass" layoutX="24.0" layoutY="143.0" prefHeight="25.0" prefWidth="165.0" promptText="PASSSWORD" />
+                  <PasswordField fx:id="conpass" layoutX="24.0" layoutY="189.0" prefHeight="25.0" prefWidth="165.0" promptText="CONFIRM PASSWORD" />
+                  <TextField fx:id="sub1" layoutX="413.0" layoutY="44.0" onKeyTyped="#checkclass" prefHeight="25.0" prefWidth="165.0" promptText="Enter Subject 1" />
+                  <TextField fx:id="sub2" layoutX="413.0" layoutY="114.0" onKeyTyped="#checkclass" prefHeight="25.0" prefWidth="165.0" promptText="Enter Subject 2" />
+                  <TextField fx:id="sub3" layoutX="413.0" layoutY="189.0" onKeyTyped="#checkclass" prefHeight="25.0" prefWidth="165.0" promptText="Enter Subject 3" />
+                  <TextField fx:id="class1" layoutX="413.0" layoutY="14.0" onKeyTyped="#checkclass" prefHeight="25.0" prefWidth="165.0" promptText="Enter Class 1" />
+                  <TextField fx:id="class2" layoutX="413.0" layoutY="85.0" onKeyTyped="#checkclass" prefHeight="25.0" prefWidth="165.0" promptText="Enter Class 2" />
+                  <TextField fx:id="class3" layoutX="413.0" layoutY="160.0" onKeyTyped="#checkclass" prefHeight="25.0" prefWidth="165.0" promptText="Enter Class 3" />
+                  <Button fx:id="submit" layoutX="179.0" layoutY="243.0" mnemonicParsing="false" onAction="#submit" prefHeight="37.0" prefWidth="94.0" style="-fx-background-color: #FFFFCC;" text="SUBMIT">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="reset" layoutX="324.0" layoutY="243.0" mnemonicParsing="false" onAction="#reset" prefHeight="37.0" prefWidth="89.0" style="-fx-background-color: #FFFFCC;" text="RESET">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="errorpass" layoutX="39.0" layoutY="226.0" prefHeight="17.0" prefWidth="146.0" textFill="#d30808">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="166.0" fitWidth="165.0" layoutX="225.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@register.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="errorname" layoutX="21.0" layoutY="77.0" prefHeight="17.0" prefWidth="165.0" textFill="#e11b1b" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Label fx:id="errorclass" layoutX="131.0" layoutY="150.0" prefHeight="29.0" prefWidth="435.0" textFill="#e41717">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

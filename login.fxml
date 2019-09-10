@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="744.0" style="-fx-border-color: #000080; -fx-border-width: 3; -fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.fxmllogincontroller">
+   <children>
+      <HBox layoutX="14.0" layoutY="15.0" prefHeight="124.0" prefWidth="716.0" style="-fx-border-color: #FFA500; -fx-border-width: 5;">
+         <children>
+            <Pane prefHeight="103.0" prefWidth="595.0">
+               <children>
+                  <Label layoutX="173.0" layoutY="14.0" text="R V College of Engineering" textFill="#330ccf">
+                     <font>
+                        <Font name="Times New Roman Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="307.0" layoutY="46.0" text="Bangalore" textFill="#330ccf">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="238.0" layoutY="69.0" text="Attendence Automation" textFill="#791a1f">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="106.0" fitWidth="119.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@220px-RVCE_New_Logo.JPG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Pane layoutX="218.0" layoutY="167.0" prefHeight="321.0" prefWidth="307.0">
+         <children>
+            <TextField fx:id="name" alignment="CENTER" layoutX="70.0" layoutY="148.0" prefHeight="25.0" prefWidth="168.0" promptText="NAME" />
+            <PasswordField fx:id="password" alignment="CENTER" layoutX="70.0" layoutY="187.0" prefHeight="25.0" prefWidth="168.0" promptText="PASSWORD" />
+            <Label fx:id="errormsg" layoutX="54.0" layoutY="212.0" prefHeight="20.0" prefWidth="200.0" textAlignment="CENTER" textFill="#f81515">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="login" layoutX="81.0" layoutY="231.0" mnemonicParsing="false" onAction="#loginprocess" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: t;" text="LOGIN">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#1a1fc4dd" height="33.52" radius="15.515" spread="0.03" width="30.54" />
+               </effect>
+            </Button>
+            <Button fx:id="reset" blendMode="DARKEN" layoutX="154.0" layoutY="230.0" mnemonicParsing="false" onAction="#reset" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: t;" text="RESET">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#191cc6" height="27.56" radius="15.809999999999999" width="37.68" />
+               </effect>
+            </Button>
+            <Label layoutX="27.0" layoutY="282.0" text="Not Registered??" />
+            <Button fx:id="register" layoutX="178.0" layoutY="276.0" mnemonicParsing="false" onAction="#register" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: transperent;" text="REGISTER" textOverrun="LEADING_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#3822c7" />
+               </effect>
+            </Button>
+            <ImageView fitHeight="132.0" fitWidth="134.0" layoutX="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@login.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
